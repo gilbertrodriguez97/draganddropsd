@@ -1,0 +1,16 @@
+<h1>Home component</h1>
+<a routerLink="/model">Go to model</a>
+
+<div>
+   <input style="width: 100%;"
+    type="range" name="Rango"
+      [(ngModel)]="data.default"
+      [ngModelOptions]="{standalone: true}"
+      [min]="data.min"
+       [max]="data.max"
+     [step]="data.step"
+   
+     
+     > 
+    
+ </div>

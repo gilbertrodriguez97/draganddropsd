@@ -1,0 +1,45 @@
+<div>
+    <a routerLink="/">Go Home</a>
+</div>
+
+<div   style="
+width: 500px;
+height: 500px;
+display: flex;
+position: absolute;
+left: 0%;
+top: 0%;
+">
+    <canvas id="canvasModel"></canvas>
+</div>
+<input
+id="bottom"
+draggable="false"
+type="image"
+style="position: absolute; left: 25px; top: 25px;"
+width="100"
+height="100"
+src="../../assets/bottomShelf.png"
+onpointerdown="window.addBottomShelf()"
+/>
+<input
+id="top"
+draggable="false"
+type="image"
+style="position: absolute; left: 125px; top: 25px;"
+width="100"
+height="100"
+src="../../assets/topShelf.png"
+onpointerdown="window.addTopShelf()"
+/>
+<div>
+    
+<div *ngFor="let paramBool of sdServ.arrayParametersBoolean">
+    <div>
+        <label for="">{{paramBool.name}}</label>
+        <input type="checkbox" [value]="paramBool.value" (change)="onChangeParameterBoolean(paramBool.id, $event)">
+    </div>
+</div>
+   
+
+</div>
